@@ -1,0 +1,5 @@
+local DEFAULT_ZSH_CONFIG_PATH="${HOME}/.zshrc"
+
+cp $DEFAULT_ZSH_CONFIG_PATH $DEFAULT_ZSH_CONFIG_PATH.backup
+rm -rf $DEFAULT_ZSH_CONFIG_PATH
+echo "source $(dirname $0:A)/env.zsh" > $DEFAULT_ZSH_CONFIG_PATH
