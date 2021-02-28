@@ -10,7 +10,7 @@ source $LOCAL_PATH/pm/env.zsh
 source $LOCAL_PATH/tmux/env.zsh
 
 # machine specific
-local MACHINE_SPECIFIC_FILE="$LOCAL_PATH/machine_specific/spec_env.sh"
+local MACHINE_SPECIFIC_FILE="${HOME}/LocalConfig/env.sh"
 source $MACHINE_SPECIFIC_FILE
 alias rf="source $MACHINE_SPECIFIC_FILE"
 alias ef="vi $MACHINE_SPECIFIC_FILE"
