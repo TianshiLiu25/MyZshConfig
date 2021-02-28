@@ -30,8 +30,11 @@ function proxy_off {
 }
 
 # pipenv
-export WORKON_HOME=${HOME}/python_envs
-source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+if [[ -f /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+]] then
+    export WORKON_HOME=${HOME}/python_envs
+    source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+fi
 
 # nvim
 export NVM_DIR="$HOME/.nvm"
