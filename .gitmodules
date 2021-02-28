@@ -16,3 +16,9 @@
 [submodule "oh-my-zsh/custom/plugins/zsh-history-substring-search"]
 	path = oh-my-zsh/custom/plugins/zsh-history-substring-search
 	url = git@github.com:zsh-users/zsh-history-substring-search.git
+[submodule "oh-my-zsh/custom/themes/powerlevel10k"]
+	path = oh-my-zsh/custom/themes/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "enhancd"]
+	path = enhancd
+	url = git@github.com:b4b4r07/enhancd.git
