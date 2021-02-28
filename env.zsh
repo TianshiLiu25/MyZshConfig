@@ -49,6 +49,7 @@ export GO_PATH=${HOME}/go
 
 # git
 git config --global core.editor vim
+alias gsu='git submodule init; git submodule update;'
 
 # shortcuts
 alias nvim=$NVIM_PATH
