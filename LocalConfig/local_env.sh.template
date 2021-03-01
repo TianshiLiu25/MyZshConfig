@@ -4,3 +4,4 @@ export NVIM_PATH=
 
 # PROXY
 PROXY_CONFIG="http://127.0.0.1:1087/";
+# PROXY_ON=true

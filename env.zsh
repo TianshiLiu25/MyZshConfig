@@ -1,16 +1,7 @@
 local LOCAL_PATH=$(dirname $0:A)
 
-# oh-my-zsh
-source $LOCAL_PATH/oh-my-zsh/zshrc.zsh
-
-# pm
-source $LOCAL_PATH/pm/env.zsh
-
-# tmux
-source $LOCAL_PATH/tmux/env.zsh
-
 # machine specific
-local MACHINE_SPECIFIC_FILE="${HOME}/LocalConfig/env.sh"
+local MACHINE_SPECIFIC_FILE="${HOME}/LocalConfig/local_env.sh"
 source $MACHINE_SPECIFIC_FILE
 alias rf="source $MACHINE_SPECIFIC_FILE"
 alias ef="vi $MACHINE_SPECIFIC_FILE"
@@ -28,6 +19,10 @@ function proxy_off {
     unset http_proxy;
     unset https_proxy;
 }
+if [[ $PROXY_ON == true ]] then
+    proxy_on
+    echo "proxy is on"
+fi
 
 # pipenv
 if [[ -f /usr/share/virtualenvwrapper/virtualenvwrapper.sh
@@ -62,6 +57,15 @@ alias vi=nvim
 alias R=". ranger"
 
 alias rp=realpath
+
+# oh-my-zsh
+source $LOCAL_PATH/oh-my-zsh/zshrc.zsh
+
+# pm
+source $LOCAL_PATH/pm/env.zsh
+
+# tmux
+source $LOCAL_PATH/tmux/env.zsh
 
 # general
 export PATH=$PATH:${HOME}/bin
