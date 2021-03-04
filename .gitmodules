@@ -34,7 +34,3 @@
 	path = tmux/tpm
 	url = https://github.com/tmux-plugins/tpm.git
 	shallow = true
-[submodule "nvim/config"]
-	path = nvim/config
-	url = git@github.com:tianshi25/nvim.git
-	shallow = true

@@ -56,7 +56,11 @@ git config --global core.editor vim
 alias gsu='git submodule update --recursive --init;'
 
 # nvim
-export NVIM_PATH=${LOCAL_PATH}/nvim/nvim.appimage
+if [[ `uname` != "Darwin" ]]; then
+    export NVIM_PATH=${LOCAL_PATH}/nvim/nvim.appimage
+else
+    export NVIM_PATH=/usr/local/share/nvim
+fi
 alias nvim=$NVIM_PATH
 alias vim=nvim
 alias vi=nvim

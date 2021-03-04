@@ -22,4 +22,4 @@ mkdir -p ~/.config/
 ln -s $(realpath $(dirname $0:A))/ranger ~/.config/ranger
 
 # nvim
-ln -s $(realpath $(dirname $0:A))/nvim/config ~/.config/nvim
+git clone https://github.com/tianshi25/nvim.git -b tianshi --depth=1
