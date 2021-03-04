@@ -1,6 +1,6 @@
 # https://github.com/Angelmmiguel/pm
 # project path manager
-source $(dirname $0:A)/pm.zsh
+source $(realpath $(dirname $0:A))/pm.zsh
 
 alias pma="pm add"
 alias pmg="pm go"

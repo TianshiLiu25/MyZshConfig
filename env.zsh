@@ -1,13 +1,10 @@
-local LOCAL_PATH=$(dirname $0:A)
+local LOCAL_PATH=$(realpath $(dirname $0:A))
 
 # oh-my-zsh
 source $LOCAL_PATH/oh-my-zsh/zshrc.zsh
 
 # pm
 source $LOCAL_PATH/pm/env.zsh
-
-# tmux
-source $LOCAL_PATH/tmux/env.zsh
 
 # machine specific
 local MACHINE_SPECIFIC_FILE="${HOME}/LocalConfig/local_env.sh"
@@ -63,6 +60,9 @@ export NVIM_PATH=${LOCAL_PATH}/nvim/nvim.appimage
 alias nvim=$NVIM_PATH
 alias vim=nvim
 alias vi=nvim
+
+# tmux
+tmux source ~/.tmux.conf
 
 alias R=". ranger"
 
