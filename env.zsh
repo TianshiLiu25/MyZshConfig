@@ -57,9 +57,9 @@ alias gsu='git submodule update --recursive --init;'
 
 # nvim
 if [[ `uname` != "Darwin" ]]; then
-    export NVIM_PATH=${LOCAL_PATH}/nvim/nvim.appimage
+    export NVIM_PATH=${LOCAL_PATH}/nvim/linux/nvim.appimage
 else
-    export NVIM_PATH=/usr/local/share/nvim
+    export NVIM_PATH=${LOCAL_PATH}/nvim/macos/bin/nvim
 fi
 alias nvim=$NVIM_PATH
 alias vim=nvim
@@ -79,6 +79,7 @@ export PATH=$PATH:${HOME}/.local/bin
 # go
 export PATH=${LOCAL_PATH}/go:$PATH
 export GO_PATH=${HOME}/go
+export GOPATH=${HOME}/go
 
 # Color Setting
 # My Theme: Tango Light
