@@ -21,5 +21,11 @@ mv ${HOME}/.config/ranger $INIT_CONFIG_BACKUP/
 mkdir -p ~/.config/
 ln -s $(realpath $(dirname $0:A))/ranger ~/.config/ranger
 
+mkdir -p ${HOME}/LocalConfig/
+cp ./LocalConfig/local_env.sh.template ${HOME}/LocalConfig/local_env_before.sh
+chmod +x ${HOME}/LocalConfig/local_env_before.sh
+touch ${HOME}/LocalConfig/local_env_after.sh
+chmod +x ${HOME}/LocalConfig/local_env_after.sh
+
 # nvim
-git clone https://github.com/tianshi25/nvim.git -b tianshi --depth=1
+# git clone https://github.com/tianshi25/nvim.git -b tianshi --depth=1
